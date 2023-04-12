@@ -26,7 +26,7 @@ export const Interface = () => {
       p={3}
     >
       <Stack spacing={3}>
-        <Typography variant="caption">Keukentafel Configurator</Typography>
+        <Typography variant="h4">Keukentafel Configurator</Typography>
         <Box className="glass" p={3}>
           <FormControl>
             <FormLabel>Tafel breedte</FormLabel>
