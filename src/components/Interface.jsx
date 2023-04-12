@@ -9,9 +9,13 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { useConfigurator } from "../contexts/Configurator";
 export const Interface = () => {
   // const { tableWidth, setTableWidth, legs, setLegs, legsColor, setLegsColor } =
   //   useConfigurator();
+
+  const { legs, setLegs, legsColor, setLegsColor, tableWidth, setTableWidth } =
+    useConfigurator();
   return (
     <Box
       sx={{
@@ -22,33 +26,33 @@ export const Interface = () => {
       p={3}
     >
       <Stack spacing={3}>
-        <Typography variant="caption">Table Configurator</Typography>
+        <Typography variant="caption">Keukentafel Configurator</Typography>
         <Box className="glass" p={3}>
           <FormControl>
-            <FormLabel>Table width</FormLabel>
+            <FormLabel>Tafel breedte</FormLabel>
             <Slider
               sx={{
                 width: "200px",
               }}
               min={50}
               max={200}
-              // value={tableWidth}
-              // onChange={(e) => setTableWidth(e.target.value)}
+              value={tableWidth}
+              onChange={(e) => setTableWidth(e.target.value)}
               valueLabelDisplay="auto"
             />
           </FormControl>
         </Box>
         <Box className="glass" p={3}>
           <FormControl>
-            <FormLabel>Legs Layout</FormLabel>
+            <FormLabel>Tafelpoten Layout</FormLabel>
             <RadioGroup
-            // value={legs}
-            // onChange={(e) => setLegs(parseInt(e.target.value))}
+              value={legs}
+              onChange={(e) => setLegs(parseInt(e.target.value))}
             >
               <FormControlLabel
                 value={0}
                 control={<Radio />}
-                label="Standard"
+                label="Standaard"
               />
               <FormControlLabel value={1} control={<Radio />} label="Solid" />
               <FormControlLabel value={2} control={<Radio />} label="Design" />
@@ -57,30 +61,30 @@ export const Interface = () => {
         </Box>
         <Box className="glass" p={3}>
           <FormControl>
-            <FormLabel>Legs Color</FormLabel>
+            <FormLabel>Tafelpoten Kleur</FormLabel>
             <RadioGroup
-            // value={legsColor}
-            // onChange={(e) => setLegsColor(e.target.value)}
+              value={legsColor}
+              onChange={(e) => setLegsColor(e.target.value)}
             >
               <FormControlLabel
                 value={"#777777"}
                 control={<Radio />}
-                label="Black"
+                label="Zwart"
               />
               <FormControlLabel
                 value={"#ECECEC"}
                 control={<Radio />}
-                label="Chrome"
+                label="Zilver"
               />
               <FormControlLabel
                 value={"#C9BD71"}
                 control={<Radio />}
-                label="Gold"
+                label="Goud"
               />
               <FormControlLabel
                 value={"#C9A3B9"}
                 control={<Radio />}
-                label="Pink Gold"
+                label="Rose Goud"
               />
             </RadioGroup>
           </FormControl>
@@ -89,3 +93,5 @@ export const Interface = () => {
     </Box>
   );
 };
+
+export default Interface;
