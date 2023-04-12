@@ -11,7 +11,7 @@ import { useConfigurator } from "../contexts/Configurator";
 const ANIM_SPEED = 12;
 
 export default function Table(props) {
-  const { nodes, materials } = useGLTF("../../public/models/Table.gltf");
+  const { nodes, materials } = useGLTF("/models/Table.gltf");
 
   const { legs, legsColor, tableWidth } = useConfigurator();
 
@@ -101,4 +101,4 @@ export default function Table(props) {
   );
 }
 
-useGLTF.preload("./../public/models/Table.gltf");
+useGLTF.preload("/models/Table.gltf");
