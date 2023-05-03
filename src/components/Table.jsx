@@ -28,15 +28,26 @@ export default function Table(props) {
     const targetScale = new THREE.Vector3(tableWidthScale, 1, 1);
     plate.current.scale.lerp(targetScale, delta * ANIM_SPEED);
 
-    const targetLeftPosition = new THREE.Vector3(-1.5 * tableWidthScale, 0, 0);
-    leftLegs.current.position.lerp(targetLeftPosition, delta * ANIM_SPEED);
+    const targetLeftLegsPosition = new THREE.Vector3(
+      -1.5 * tableWidthScale,
+      0,
+      0
+    );
+    leftLegs.current.position.lerp(targetLeftLegsPosition, delta * ANIM_SPEED);
 
-    const targetRightPosition = new THREE.Vector3(1.5 * tableWidthScale, 0, 0);
-    rightLegs.current.position.lerp(targetRightPosition, delta * ANIM_SPEED);
+    const targetRightLegsPosition = new THREE.Vector3(
+      1.5 * tableWidthScale,
+      0,
+      0
+    );
+    rightLegs.current.position.lerp(
+      targetRightLegsPosition,
+      delta * ANIM_SPEED
+    );
   });
 
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={100}>
       <mesh
         castShadow
         geometry={nodes.Plate.geometry}

@@ -10,12 +10,13 @@ import {
   Typography,
 } from "@mui/material";
 import { useConfigurator } from "../contexts/Configurator";
-export const Interface = () => {
-  // const { tableWidth, setTableWidth, legs, setLegs, legsColor, setLegsColor } =
-  //   useConfigurator();
 
+export const Interface = () => {
   const { legs, setLegs, legsColor, setLegsColor, tableWidth, setTableWidth } =
     useConfigurator();
+
+  // const { closetWidth, setClosetWidth, shelfWidth, setShelfWidth } =
+  //   useConfigurator();
   return (
     <Box
       sx={{
@@ -25,6 +26,24 @@ export const Interface = () => {
       }}
       p={3}
     >
+      {/* <Stack spacing={3}>
+        <Typography variant="h4">Kast Configurator</Typography>
+        <Box className="glass" p={3}>
+          <FormControl>
+            <FormLabel>hele kast breedte</FormLabel>
+            <Slider
+              sx={{
+                width: "400px",
+              }}
+              min={30}
+              max={200}
+              value={closetWidth}
+              onChange={(e) => setClosetWidth(e.target.value)}
+              valueLabelDisplay="auto"
+            />
+          </FormControl>
+        </Box>
+      </Stack> */}
       <Stack spacing={3}>
         <Typography variant="h4">Keukentafel Configurator</Typography>
         <Box className="glass" p={3}>

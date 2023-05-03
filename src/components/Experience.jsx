@@ -1,6 +1,14 @@
 import { Stage, OrbitControls } from "@react-three/drei";
 import { useConfigurator } from "../contexts/Configurator";
 import Table from "./Table";
+import Room from "./LowPolyRoom";
+import Kast from "./Kast";
+import Closet from "./Closet";
+import NewKast from "./NewKast";
+import { Kast4 } from "./Kast4";
+import Kast5 from "./Kast5";
+import Kast6 from "./Kast6";
+import Kast7 from "./Kast7";
 
 export const Experience = () => {
   const { legs } = useConfigurator();
@@ -11,13 +19,20 @@ export const Experience = () => {
         environment="city"
         shadows={{
           type: "accumulative",
-          color: "#85ffbd",
+          color: "#ececec",
           colorBlend: 2,
           opacity: 2,
         }}
-        adjustCamera={2}
+        adjustCamera={3}
       >
         <Table />
+        {/* <Room /> */}
+        {/* <Closet /> */}
+        {/* <Closet /> */}
+        {/* <NewKast /> */}
+        {/* <Kast4 /> */}
+        {/* <Kast5 /> */}
+        {/* <Kast7 /> */}
       </Stage>
       <OrbitControls
         makeDefault
