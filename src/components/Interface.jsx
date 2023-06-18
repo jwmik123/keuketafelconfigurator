@@ -57,7 +57,7 @@ export const Interface = () => {
             }}
             onClick={() => setCloseMenu(!closeMenu)}
           >
-            {closeMenu ? "close menu" : "open menu"}
+            {closeMenu ? "sluit menu" : "open menu"}
           </Typography>
         </Stack>
         {closeMenu && (

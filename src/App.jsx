@@ -6,7 +6,7 @@ import { Perf } from "r3f-perf";
 function App() {
   return (
     <>
-      <Canvas shadows camera={{ position: [4, 4, -12], fov: 35 }}>
+      <Canvas shadows camera={{ position: [3, 3, -12], fov: 45 }}>
         {/* <Perf position="top-left" /> */}
         <Experience />
       </Canvas>

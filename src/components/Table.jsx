@@ -47,7 +47,7 @@ export default function Table(props) {
   });
 
   return (
-    <group {...props} dispose={null} scale={100}>
+    <group {...props} dispose={null} scale={2}>
       <mesh
         castShadow
         geometry={nodes.Plate.geometry}
