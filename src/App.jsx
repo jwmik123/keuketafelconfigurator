@@ -7,7 +7,6 @@ function App() {
   return (
     <>
       <Canvas shadows camera={{ position: [3, 3, -12], fov: 45 }}>
-        {/* <Perf position="top-left" /> */}
         <Experience />
       </Canvas>
       <Interface />
